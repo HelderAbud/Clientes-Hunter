@@ -9,8 +9,7 @@
 
 **Segurança:** ver [`../SEGURANCA-LGPD.md`](../SEGURANCA-LGPD.md).
 
-**PDF original (local, fora do repo):**  
-`C:\Users\Pessoal\Downloads\Clientes_900165.pdf`
+**PDF original:** manter **fora do repositório** (pasta local privada do titular — ex.: Downloads). Nome típico: `Clientes_900165.pdf`.
 
 **Atualizar clientes:** exportar novo PDF e rodar parser (pedir ajuda no Cursor). Não enviar CSV completo para IA — mascarar CNPJ/telefone.
 

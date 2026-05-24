@@ -152,4 +152,4 @@ Seguir [`SEGURANCA-LGPD.md`](SEGURANCA-LGPD.md):
 
 ---
 
-*Fontes: lista de cidades (imagem 22/05/2026), Clientes_900165.pdf (Downloads).*
+*Fontes: lista de cidades (imagem 22/05/2026), export PDF comercial processado localmente (não versionado).*
