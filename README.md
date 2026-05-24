@@ -67,7 +67,7 @@ Clientes Hunter/
 
 ## Começar rápido
 
-### Colaborador (dev / irmão)
+### Colaborador (dev)
 
 1. Clone o repositório
 2. Leia [`CONTRIBUTING.md`](CONTRIBUTING.md) — **obrigatório**

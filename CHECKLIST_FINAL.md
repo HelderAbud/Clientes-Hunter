@@ -85,7 +85,7 @@
 
 ---
 
-## 7. Colaboração (irmão / dev)
+## 7. Colaboração (dev)
 
 - [ ] Clone + leitura README + CONTRIBUTING concluídos
 - [ ] Setup planilha feito seguindo SETUP-GOOGLE-SHEETS.md

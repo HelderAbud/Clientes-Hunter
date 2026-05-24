@@ -1,6 +1,6 @@
 # Como colaborar — Clientes Hunter
 
-Guia para quem entra no projeto (ex.: colaborador, irmão, dev). Leia **nesta ordem** antes de alterar qualquer coisa.
+Guia para quem entra no projeto (colaborador ou dev). Leia **nesta ordem** antes de alterar qualquer coisa.
 
 ---
 
