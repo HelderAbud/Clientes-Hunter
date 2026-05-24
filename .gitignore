@@ -1,0 +1,51 @@
+﻿# Clientes Hunter — dados sensíveis (não commitar)
+
+# Rascunhos locais (notas pessoais, prompts)
+Novo Documento de Texto.md.txt
+*-rascunho*
+*-draft*
+
+# Base de clientes existentes (CNPJ, razão social)
+data/clientes-existentes.csv
+data/_pdf_raw.txt
+data/backups/
+data/exports/
+data/*.pdf
+
+# PDFs e exports em qualquer pasta do projeto
+*.pdf
+Clientes_*.pdf
+
+# Secrets (fases futuras: Telegram, Evolution, APIs)
+.env
+.env.*
+!.env.example
+
+# Planilhas com telefones reais (se exportar para xlsx/csv local)
+*-leads-export.csv
+*-leads-export.xlsx
+Clientes-Hunter-Leads*.csv
+Clientes-Hunter-Leads*.xlsx
+
+# Sessões / credenciais
+*cookies*
+*instagram*session*
+*.pem
+*.key
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+~$*
+
+# Imagens locais / screenshots pessoais (não versionar)
+WhatsApp Image*.jpeg
+WhatsApp Image*.jpg
+screenshots-local/
+
+# Python cache (se usar scripts locais)
+__pycache__/
+*.pyc
+.venv/
