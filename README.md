@@ -36,8 +36,8 @@ Representantes comerciais perdem tempo com leads ruins (loja feminina, fora da �
 |-------|--------|
 | Dias 1–2 — Regras + LGPD | ✅ |
 | Dias 3–5 — Planilha operacional v1 | ✅ |
-| Dia 6 — Templates WhatsApp | ⬜ **próximo** |
-| Dias 7–9 — Biblioteca + Instagram | ⬜ |
+| Dia 6 — Templates WhatsApp | ✅ |
+| Dias 7–9 — Biblioteca + Instagram | ⬜ **próximo** |
 | Dias 10–15 — Campo real (20 leads) | ⬜ |
 | Dias 16–22 — Visitas + IA + gate backend | ⬜ |
 

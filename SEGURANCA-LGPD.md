@@ -82,7 +82,8 @@ Dúvida: mensagem de primeiro contato WhatsApp
 
 - Envio **manual** com aprovação sua.
 - **5–8** abordagens frias novas por dia (número Business compartilhado).
-- Horário comercial (9h–17h).
+- **No máximo 1 abordagem por loja por dia**; follow-up só em outro dia.
+- Horário comercial (9h–17h); **nunca após as 18h**.
 - Sem lista de transmissão para prospecção fria.
 
 ---

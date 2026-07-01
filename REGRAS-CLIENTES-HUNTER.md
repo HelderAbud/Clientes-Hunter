@@ -105,8 +105,10 @@ Se bater → marcar `flag_ja_cliente = sim` e **não** usar template de prospec�
 
 - **5 a 8** novas abordagens frias por dia (número Business compartilhado com carteira)
 - **3 a 5 variações** de texto de primeiro contato; alternar
+- **No máximo 1 abordagem por loja por dia** — não insistir nem cobrar resposta no mesmo dia
+- **Follow-up só em outro dia** — nunca no mesmo dia do primeiro contato
 - Sempre **revisar em voz alta** antes de enviar
-- Horário comercial: **9h–17h**
+- Horário comercial: **9h–17h** (preferencial); **nunca enviar após as 18h** (limite rígido)
 - **Nunca** lista de transmissão para prospecção fria
 
 ---

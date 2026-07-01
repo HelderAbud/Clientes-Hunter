@@ -206,12 +206,12 @@ flowchart LR
 
 #### Checklist
 
-- [ ] Etiquetas WA criadas
-- [ ] 3 templates primeiro contato prontos
-- [ ] Dry run em 1 lead teste < 2 minutos
-- [ ] Regra: ler em voz alta antes de enviar
+- [x] Etiquetas WA criadas (7: Novo, Contato, Agenda, Visita, Fechado, Perdido, Não abordar)
+- [x] 3 templates primeiro contato prontos — [`templates/planilha/Mensagens-WhatsApp.md`](templates/planilha/Mensagens-WhatsApp.md) (variações A, B, C)
+- [x] Dry run validado — envio teste ao próprio número, acentos/emoji corretos
+- [x] Regra: ler em voz alta antes de enviar
 
-**Pronto quando:** escolhe template + abre WA em menos de 2 min.
+**Pronto quando:** ✅ concluído (Task A3.1). Templates em UTF-8 validados no WhatsApp.
 
 **Próximo:** `Iniciar Dia 7`
 
@@ -230,11 +230,11 @@ flowchart LR
 
 #### Checklist
 
-- [ ] 2 + 2 templates prontos
-- [ ] 3 kits de fotos com links
-- [ ] Task A3 fechada
+- [x] 2 + 2 templates prontos — [`Mensagens-WhatsApp.md`](templates/planilha/Mensagens-WhatsApp.md) §2 e §3
+- [ ] 3 kits de fotos com links — nomes prontos em [`KitsFotos.csv`](templates/planilha/KitsFotos.csv); **falta preencher o link do Drive**
+- [ ] Task A3 fechada (depende dos links acima)
 
-**Pronto quando:** Task A3 completa.
+**Pronto quando:** Task A3 completa (templates ✅ + links dos kits preenchidos).
 
 **Próximo:** `Iniciar Dia 8`
 
@@ -261,10 +261,10 @@ flowchart LR
 
 #### Checklist
 
-- [ ] Hashtags documentadas na planilha
-- [ ] Roteiro 5 min escrito (pode ser nota na aba `Hashtags`)
+- [x] Hashtags documentadas — [`Hashtags.csv`](templates/planilha/Hashtags.csv): 10 gerais + 51 cidades ABRIR (importar na aba `Hashtags`)
+- [x] Roteiro 5 min escrito — entregue para colar como nota na aba `Hashtags`
 - [ ] 5 perfis triados de teste preenchidos na planilha
-- [ ] Confirmado: **sem DM frio em massa**; contato só WhatsApp
+- [x] Confirmado: **sem DM frio em massa**; contato só WhatsApp
 
 **Pronto quando:** Task A4 fechada.
 
@@ -698,8 +698,8 @@ flowchart LR
 | 3 | Planilha Leads | ✅ |
 | 4 | Abas + Dashboard | ✅ |
 | 5 | 10 leads teste | ✅ |
-| 6 | Templates WA + etiquetas | ⬜ |
-| 7 | Templates + kits fotos | ⬜ |
+| 6 | Templates WA + etiquetas | ✅ |
+| 7 | Templates + kits fotos | ⬜ **próximo** |
 | 8 | Playbook Instagram | ⬜ |
 | 9 | Revisão + ritual diário | ⬜ |
 | 10–15 | Campo B1 | ⬜ |
@@ -710,4 +710,4 @@ flowchart LR
 
 ---
 
-*Última atualização: 2026-05-22 — Dias 1–5 concluídos (Task A2); próximo Dia 6.*
+*Última atualização: 2026-06-01 — Dias 1–6 concluídos (Task A3.1: templates WhatsApp + etiquetas); próximo Dia 7.*

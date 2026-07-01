@@ -8,6 +8,7 @@ Arquivos para importar no Google Sheets ([`SETUP-GOOGLE-SHEETS.md`](SETUP-GOOGLE
 | [`Leads-10-teste.csv`](Leads-10-teste.csv) | Leads (10 cenários) | 5 |
 | [`Atividades.csv`](Atividades.csv) | Atividades | 4 |
 | [`KitsFotos.csv`](KitsFotos.csv) | KitsFotos | 4 |
+| [`Mensagens-WhatsApp.md`](Mensagens-WhatsApp.md) | Mensagens (1º contato) | 6 |
 | [`Hashtags.csv`](Hashtags.csv) | Hashtags | 4 |
 | [`listas-validacao.csv`](listas-validacao.csv) | Listas (auxiliar) | 3 |
 | [`Dashboard-formulas.md`](Dashboard-formulas.md) | Dashboard | 4 |
