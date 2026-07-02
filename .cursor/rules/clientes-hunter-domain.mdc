@@ -1,0 +1,39 @@
+---
+description: Regras de dominio, LGPD e limites do MVP do Clientes Hunter
+alwaysApply: true
+---
+
+# Clientes Hunter Domain
+
+- O projeto esta no MVP manual: Google Sheets, CSV, Markdown, Cursor e WhatsApp Business manual com HITL.
+- O publico-alvo sao lojas masculinas multimarcas no DF e Norte de Goias.
+- KPI principal: `agendamentos confirmados / leads qualificados`.
+- Fonte de verdade para termos: `CONTEXT.md`. Regras detalhadas: `REGRAS-CLIENTES-HUNTER.md`. Privacidade: `SEGURANCA-LGPD.md`.
+
+## Regras De Negocio
+
+- Lead qualificado precisa estar na geo-cerca, ter perfil masculino/multimarcas, indicio de WhatsApp, pelo menos 4 marcas masculinas e nao ser cliente existente.
+- Cidade fora de `data/geo-cerca-cidades.csv` vira `Descartado` com motivo `Fora da geo-cerca`.
+- Loja exclusivamente feminina vira `Descartado` com motivo `Loja feminina`.
+- Cliente existente nao recebe prospeccao fria; se fizer sentido, entra em reativacao e nao conta no KPI de prospeccao fria.
+- Opt-out vira `Descartado` com motivo `Opt-out` e nunca deve ser reabordado.
+- Use os valores fechados de `status_funil`, `score`, `fonte`, `motivo_descarte` e cidade conforme documentos e templates.
+
+## Limites Operacionais
+
+- WhatsApp frio sempre manual no MVP: 5-8 novas abordagens por dia, uma por loja/dia, follow-up so em outro dia.
+- Horario de envio: 9h-17h preferencial, nunca apos 18h.
+- Instagram e manual, apenas perfis publicos, com 8-12 perfis triados por dia.
+- Nao propor bot logado, scraping em massa, rotacao de IP, DM fria em massa ou lista de transmissao para prospeccao fria.
+
+## Dados Sensiveis
+
+- Nunca commitar ou expor `data/clientes-existentes.csv`, `data/_pdf_raw.txt`, PDFs de clientes, `.env`, cookies, sessoes ou exports com telefones reais.
+- Antes de usar IA, mascarar telefone como `TELEFONE_OCULTO` e CNPJ como `CNPJ_OCULTO`.
+- Nao enviar CSV/PDF inteiro de clientes para IA; usar apenas recortes minimos e mascarados.
+
+## Fora Do Escopo Ate O Gate Dia 22
+
+- Nao implementar PostgreSQL, API, JWT, n8n, Evolution API, painel Kanban, deduplicacao automatica ou `sanitizeForAI()` como se ja existissem.
+- Esses termos podem aparecer em roadmap, ADR ou plano futuro, mas nao devem virar execucao sem decisao registrada.
+

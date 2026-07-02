@@ -1,0 +1,3 @@
+codigo,cnpj,fantasia,razao_social,situacao,uf,cidade,bairro,tempo_sem_compra
+00000001,CNPJ_OCULTO,LOJA EXEMPLO A,RAZAO EXEMPLO LTDA,Ativo,DF,BRASILIA,CENTRO,6 meses
+00000002,CNPJ_OCULTO,LOJA EXEMPLO B,OUTRA RAZAO LTDA,Ativo,GO,FORMOSA,CENTRO,1 ano
