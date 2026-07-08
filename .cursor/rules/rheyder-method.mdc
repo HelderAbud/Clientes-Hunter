@@ -1,0 +1,36 @@
+---
+description: Aplica o Rheyder Method v1.2 e Superpowers ao workflow do Clientes Hunter
+alwaysApply: true
+---
+
+# Rheyder Method + Superpowers
+
+- Antes de executar, trie a tarefa por risco e ambiguidade: `Hotfix`, `Complex`, `Normal` ou `Simple`.
+- Use `Simple` apenas para mudanca pequena, localizada, sem contrato novo e sem dado sensivel.
+- Use `Normal` quando houver regra de negocio, plano, documento importante, planilha, template operacional ou ambiguidade moderada.
+- Use `Complex` para backend, banco, automacao WhatsApp/Instagram, integracao externa, LGPD sensivel, arquitetura ou alto custo de erro.
+- Use `Hotfix` somente para operacao real quebrada/degradada; aplique patch minimo e valide o sintoma.
+
+## Contratos e Fatias
+
+- Codigo ou documento novo nao deve inventar contrato publico fora de spec, plano, ADR ou contrato minimo escrito.
+- Contratos incluem: funil, score, geo-cerca, colunas de planilha, templates WhatsApp, KPIs, API futura, eventos e limites LGPD.
+- Se o desenho mudar, atualize o artefato correto antes ou junto da implementacao.
+- Trabalhe em fatias verticais verificaveis: cada fatia deve fechar um valor operacional ou comportamento acordado.
+- Se aparecer sistema novo, risco novo ou plano reescrito do zero, suba a trilha e pare para realinhar.
+
+## Plano e Execucao
+
+- Tarefa nao trivial exige brainstorming curto, Plan Mode e plano aprovado antes de editar.
+- Planos relevantes devem ficar em `.cursor/plans/` com nome `plan-YYYY-MM-DD-assunto.md`.
+- Durante a execucao, siga o plano em passos pequenos e valide cada fatia antes de avancar.
+- Use TDD ou teste de regressao quando houver codigo, regra de negocio automatizada ou bugfix tecnico.
+- Para mudancas apenas documentais/CSV, use checklist manual, revisao de links, nomenclatura e LGPD.
+
+## Revisao e Done
+
+- Antes de concluir, revise diff, escopo, dados sensiveis, aderencia ao dominio e validacao executada.
+- Em mudanca relevante, aplicar o fluxo dos 4 especialistas do `CONTRIBUTING.md`: Codigo, Testes, Recrutador, Analista GitHub.
+- Entrega pronta precisa explicar o que mudou, o que foi verificado e riscos residuais.
+- Nunca commitar, pushar ou abrir PR sem pedido explicito do usuario.
+

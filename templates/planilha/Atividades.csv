@@ -1,0 +1,4 @@
+data,id_lead,acao,canal,resposta,nota
+2026-05-22,L001,Cadastro lead teste,Planilha,,Lead ficticio Dia 3
+2026-05-22,L008,Mudanca funil para Perdido,Planilha,Sem interesse,Teste Dia 5
+2026-05-22,L004,Preparacao mensagem WA,WhatsApp,,Aguardando envio

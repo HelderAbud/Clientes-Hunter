@@ -1,0 +1,2 @@
+id_lead,loja,cidade,instagram,link_perfil_insta,whatsapp,link_wa_me,fonte,marcas_contadas,flag_multimarcas,flag_loja_feminina,flag_ja_cliente,score,status_funil,status_cidade,data_ultimo_contato,proximo_passo,data_proximo_passo,motivo_descarte,observacoes
+L001,LOJA TESTE ALPHA,FORMOSA,@loja_teste_alpha,https://instagram.com/loja_teste_alpha,61999990001,https://wa.me/5561999990001,Instagram,5,sim,nao,nao,alto,Novo lead,OK,,Preparar mensagem WA,,,Lead ficticio Dia 3 - validacao estrutura

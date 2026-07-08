@@ -1,0 +1,19 @@
+tipo,valor
+fonte,Instagram
+fonte,Maps
+fonte,Guia
+fonte,Indicação
+flag,sim
+flag,nao
+score,alto
+score,medio
+score,baixo
+status_funil,Novo lead
+status_funil,Contato previo feito
+status_funil,Agendamento de visita
+status_funil,Visita com mostruario
+status_funil,Pedido fechado
+status_funil,Perdido
+status_funil,Descartado
+status_cidade,ABRIR
+status_cidade,OK
