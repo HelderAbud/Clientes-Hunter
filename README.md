@@ -1,14 +1,15 @@
-<<<<<<< HEAD
-# Clientes-Hunter
-Clientes Hunter: sistema de captação e prospecção comercial para representantes de moda masculina no DF e Norte de Goiás. Encontra lojas multimarcas no Instagram e Google Maps, qualifica leads por score e geo-cerca, organiza contato WhatsApp com aprovação humana e acompanha o funil Kanban. MVP operacional em Google Sheets.
-=======
 # Clientes Hunter
 
 Sistema de captação e prospecção comercial para representantes de moda masculina no **DF** e **Norte de Goiás**. Encontra lojas multimarcas no Instagram e Google Maps, qualifica leads por score e geo-cerca, organiza contato WhatsApp com aprovação humana e acompanha o funil Kanban até visita com mostruário. **MVP operacional em Google Sheets.**
 
-[![Progresso](https://img.shields.io/badge/progresso-Dias%201--5%20✅-brightgreen)](#progresso)
+[![Progresso](https://img.shields.io/badge/progresso-Dias%201--6%20✅-brightgreen)](#progresso)
 [![Fase](https://img.shields.io/badge/fase-MVP%20manual-blue)](#stack-atual)
 [![LGPD](https://img.shields.io/badge/LGPD-documentado-orange)](SEGURANCA-LGPD.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+**Pitch (1 linha):** Prospecção B2B multimarcas com geo-cerca, score e funil até agendamento — MVP manual com KPI e LGPD documentada.
+
+**Trilha portfólio:** [`TRILHA-DIA-A-DIA.md`](TRILHA-DIA-A-DIA.md) · **Roteiro operacional:** [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md)
 
 ---
 
@@ -54,6 +55,9 @@ Detalhe: [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md)
 ```
 Clientes Hunter/
 ├── README.md                 ← você está aqui
+├── LICENSE                   ← MIT
+├── TRILHA-DIA-A-DIA.md       ← trilha portfólio (Rheyder + Superpowers)
+├── CONTEXT.md                ← vocabulário canônico
 ├── CONTRIBUTING.md           ← guia para colaboradores
 ├── CHECKLIST_FINAL.md        ← auditoria pré-push (4 especialistas)
 ├── PLANO-CLIENTES-HUNTER.md  ← visão completa fases 0–7
@@ -78,7 +82,7 @@ Clientes Hunter/
 3. Leia [`SEGURANCA-LGPD.md`](SEGURANCA-LGPD.md) — dados sensíveis
 4. Importe planilha: [`templates/planilha/SETUP-GOOGLE-SHEETS.md`](templates/planilha/SETUP-GOOGLE-SHEETS.md)
 5. Peça ao titular o `data/clientes-existentes.csv` real (fora do Git)
-6. No Cursor: `Iniciar Dia 6`
+6. Siga [`TRILHA-DIA-A-DIA.md`](TRILHA-DIA-A-DIA.md) ou no Cursor: `Iniciar Dia 7`
 
 ### Representante (operação)
 
@@ -115,6 +119,8 @@ Regras completas: [`REGRAS-CLIENTES-HUNTER.md`](REGRAS-CLIENTES-HUNTER.md)
 
 | Documento | Conteúdo |
 |-----------|----------|
+| [`TRILHA-DIA-A-DIA.md`](TRILHA-DIA-A-DIA.md) | Trilha portfólio dia a dia |
+| [`CONTEXT.md`](CONTEXT.md) | Vocabulário e KPIs |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Como colaborar + fluxo 4 especialistas |
 | [`CHECKLIST_FINAL.md`](CHECKLIST_FINAL.md) | Auditoria pré-envio |
 | [`PLANO-CLIENTES-HUNTER.md`](PLANO-CLIENTES-HUNTER.md) | Plano completo (fases 0–7) |
@@ -137,5 +143,10 @@ Regras completas: [`REGRAS-CLIENTES-HUNTER.md`](REGRAS-CLIENTES-HUNTER.md)
 
 ## Licença
 
-Uso interno / operacional. Definir licença pública se o projeto for open source.
->>>>>>> docs/pr1-inventory
+Este projeto está licenciado sob a **[MIT License](LICENSE)**.
+
+Copyright (c) 2026 Helder Abud
+
+Você pode usar, copiar, modificar e distribuir o código e a documentação deste repositório, desde que inclua o aviso de copyright e o texto completo da licença em redistribuições relevantes.
+
+> **Dados operacionais:** arquivos listados no [`.gitignore`](.gitignore) (ex.: `data/clientes-existentes.csv`, `.env`) **não** fazem parte do que é publicado no Git e permanecem sob sua responsabilidade local, conforme [`SEGURANCA-LGPD.md`](SEGURANCA-LGPD.md).
