@@ -1,9 +1,9 @@
 ---
-description: Aplica o Rheyder Method v1.2 e Superpowers ao workflow do Clientes Hunter
+description: Aplica o Helder Method v1.2 e Superpowers ao workflow do Clientes Hunter
 alwaysApply: true
 ---
 
-# Rheyder Method + Superpowers
+# Helder Method + Superpowers
 
 - Antes de executar, trie a tarefa por risco e ambiguidade: `Hotfix`, `Complex`, `Normal` ou `Simple`.
 - Use `Simple` apenas para mudanca pequena, localizada, sem contrato novo e sem dado sensivel.

@@ -1,7 +1,7 @@
 # Validation — Trilha Dia 1 (README)
 
 **Data:** 2026-07-08  
-**Trilha Rheyder:** Simple  
+**Trilha Helder:** Simple  
 **Fatia:** Repositório apresentável no GitHub em 30 segundos  
 **Referência:** [`TRILHA-DIA-A-DIA.md`](../../TRILHA-DIA-A-DIA.md) — Fase A, Dia 1
 

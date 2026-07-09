@@ -1,6 +1,6 @@
 # AGENTS.md - Clientes Hunter
 
-Base operacional alinhada ao Rheyder Method v1.2 e ao Superpowers Cursor Playbook: contexto claro, triagem por risco, plano antes de tarefa relevante, fatias pequenas, validacao objetiva e gate humano em dados sensiveis ou mudancas de contrato.
+Base operacional alinhada ao Helder Method v1.2 e ao Superpowers Cursor Playbook: contexto claro, triagem por risco, plano antes de tarefa relevante, fatias pequenas, validacao objetiva e gate humano em dados sensiveis ou mudancas de contrato.
 
 ## Visao Geral
 
