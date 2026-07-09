@@ -1,8 +1,8 @@
 # Trilha dia a dia — Clientes Hunter
 
-> **Metodologia:** [Rheyder Method v1.2](../Agentes/rheyder-method-v1.2-resumo-compartilhavel.md) + [Superpowers Cursor Playbook](../Skills/superpowers-cursor-playbook.md)  
+> **Metodologia:** [Helder Method v1.2](../Agentes/helder-method-v1.2-resumo-compartilhavel.md) + [skills-pessoal](../Agentes/skills-pessoal/skills-pessoal/README-pt_br.md) ([WORKFLOW](../Agentes/skills-pessoal/skills-pessoal/WORKFLOW.md))  
 > **Iniciativa:** MVP manual + apresentação de portfólio (produto/operação)  
-> **Triagem Rheyder:** **Normal** (regras de negócio, LGPD, contrato de planilha)  
+> **Triagem Helder:** **Normal** (regras de negócio, LGPD, contrato de planilha)  
 > **Custo:** R$ 0 · **Backend/cloud:** só após gate Dia 22  
 
 **Complementa:** [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md) (roteiro operacional original).
@@ -11,18 +11,41 @@
 
 ## Como usar esta trilha
 
-1. **Manhã (15 min):** leia o dia, confira trilha Rheyder e gates HITL.
-2. **Cursor:** use o prompt do dia em **Plan Mode** antes de editar.
-3. **Tarde:** execute a fatia vertical do dia.
-4. **Fim do dia:** marque checklist, registre `docs/grill-logs/validation-YYYY-MM-DD-dia-N.md` se aplicável.
-4. **Planos por fatia:** salve em `.cursor/plans/plan-YYYY-MM-DD-assunto.md` quando o dia pedir.
+1. **Manhã (15 min):** leia o dia, confira trilha Helder e gates HITL.
+2. **Cursor:** abra o prompt do dia; em Normal/Complex use `to-spec` → `to-issues` antes de editar.
+3. **Tarde:** execute a fatia vertical do dia (MVP manual = build documental, sem `tdd`).
+4. **Fim do dia:** marque checklist; registre `docs/grill-logs/validation-YYYY-MM-DD-dia-N.md` se aplicável; use `slice-verification` mental (checklist + LGPD).
+5. **Planos por fatia:** `.cursor/plans/plan-YYYY-MM-DD-hunter-*.md` quando o dia pedir.
+6. **Commit/push/PR:** só com pedido explícito (HITL).
 
-### Artefatos Rheyder (este projeto)
+### Helder → skills-pessoal
+
+| Trilha Helder | Caminho |
+|---------------|---------|
+| **Simple** | Fast path: fazer → verificar → resumir |
+| **Normal** | `to-spec` → `to-issues` → build documental → `slice-verification` → `code-review` (proporcional) |
+| **Complex** | igual Normal + HITL entre fases; `context-discovery` antes de mudar `CONTEXT.md` / `REGRAS` / ADR |
+| **Hotfix** | `diagnose` → patch mínimo → regressão → só então retomar a trilha |
+
+### Core Workflow (mapa)
+
+| Fase | Skill |
+|------|-------|
+| Spec | `to-spec` |
+| Plan | `to-issues` |
+| Branch | `git-workflow-and-versioning` |
+| Build | documental / checklist (sem `tdd` no MVP manual) |
+| Verify | `slice-verification` (checklist + LGPD) |
+| Review | `code-review` |
+| Simplify | `code-simplification` (se houver drift documental) |
+| Ship | `finishing-a-development-branch` |
+
+### Artefatos Helder (este projeto)
 
 | Tipo | Onde | Quando |
 |------|------|--------|
 | Contrato mínimo | `CONTEXT.md`, `REGRAS-CLIENTES-HUNTER.md` | Antes de mudar funil/score/geo-cerca |
-| Plano fatia | `.cursor/plans/plan-*` | Dias com ⬜ Plan Mode |
+| Plano fatia | `.cursor/plans/plan-YYYY-MM-DD-hunter-*.md` | Dias Normal/Complex |
 | Validação | `docs/grill-logs/validation-*` | Fim de cada bloco (Dias 9, 15, 22) |
 | Changelog | commit message + nota no grill-log | Cada entrega |
 
@@ -32,6 +55,7 @@
 - Mudar contrato de planilha (colunas, dropdowns, KPI)
 - Enviar WhatsApp frio em massa ou fora dos limites (5–8/dia, 9h–17h)
 - Iniciar backend/API (após Dia 22)
+- Commit, push ou PR
 
 ---
 
@@ -55,7 +79,7 @@
 |-------|----------|
 | **Fatia vertical** | Repositório apresentável no GitHub em 30 segundos |
 | **Trilha** | Simple (Express se só README; Assistida se tocar CONTRIBUTING) |
-| **Superpowers** | Brainstorm → plano 1 página → executar → revisão diff |
+| **Skills** | Fast path (Simple) ou `to-spec` → `to-issues` → diff → `code-review` |
 
 **Tarefas**
 - [x] Resolver conflito `<<<<<<< HEAD` no README (manter versão completa com badges)
@@ -73,7 +97,7 @@
 ```text
 Trilha Simple — Clientes Hunter Dia 1.
 Resolver conflito README, manter versão com badges e progresso Dias 1-6.
-Não alterar regras de negócio. Plan Mode → diff mínimo → checklist DoD.
+Não alterar regras de negócio. Fast path → diff mínimo → checklist DoD.
 ```
 
 **HITL:** revisar diff antes de commit.
@@ -88,10 +112,10 @@ Não alterar regras de negócio. Plan Mode → diff mínimo → checklist DoD.
 | **Trilha** | Simple |
 
 **Tarefas**
-- [ ] Criar `docs/portfolio/etapas.md` (5 etapas operacionais — ver modelo abaixo)
-- [ ] Diagrama Mermaid do funil no README ou em `docs/portfolio/etapas.md`
-- [ ] Preparar screenshot planilha **demo** (dados fictícios) → `docs/screenshots/planilha-demo.png`
-- [ ] Atualizar README com imagem do funil ou planilha demo
+- [x] Criar `docs/portfolio/etapas.md` (5 etapas operacionais — ver modelo abaixo)
+- [x] Diagrama Mermaid do funil no README ou em `docs/portfolio/etapas.md`
+- [ ] Preparar screenshot planilha **demo** (dados fictícios) → `docs/screenshots/planilha-demo.png` *(guia: [`docs/screenshots/README.md`](docs/screenshots/README.md))*
+- [x] Atualizar README com Mermaid do funil + link para `docs/portfolio/etapas.md` *(imagem PNG ainda pendente)*
 
 **Modelo `docs/portfolio/etapas.md`**
 1. Regras + geo-cerca (`REGRAS`, CSV cidades)
@@ -101,8 +125,9 @@ Não alterar regras de negócio. Plan Mode → diff mínimo → checklist DoD.
 5. KPI agendamentos / leads qualificados
 
 **Validação**
-- [ ] Nenhum telefone/CNPJ real em screenshots
-- [ ] Etapas numeradas com tags: `Geo-cerca`, `HITL`, `KPI`
+- [x] Nenhum telefone/CNPJ real nos artefatos criados (docs/README; PNG ainda não existe)
+- [x] Etapas numeradas com tags: `Geo-cerca`, `HITL`, `KPI`
+- [ ] Revisar PNG quando existir (zero PII) antes de commit
 
 **Prompt Cursor**
 ```text
@@ -124,7 +149,7 @@ Screenshot só com dados fictícios. Trilha Simple. Não implementar backend.
 **Tarefas**
 - [ ] Cursor: `Iniciar Dia 7`
 - [ ] Revisar biblioteca de marcas / critérios multimarcas
-- [ ] Plan Mode: fatia do dia em `.cursor/plans/plan-YYYY-MM-DD-dia-7.md`
+- [ ] `to-issues`: fatia do dia em `.cursor/plans/plan-YYYY-MM-DD-hunter-dia-7.md`
 
 **Validação:** checklist do Dia 7 em DIA-A-DIA marcado.
 
@@ -163,7 +188,7 @@ Screenshot só com dados fictícios. Trilha Simple. Não implementar backend.
 - Horário 9h–17h
 - Opt-out → `Descartado` / motivo `Opt-out`
 
-**Superpowers (bug/regra):** se dúvida de qualificação → Plan Mode + consultar `REGRAS-CLIENTES-HUNTER.md` antes de mudar planilha.
+**Skills (bug/regra):** se dúvida de qualificação → `context-discovery` + `REGRAS-CLIENTES-HUNTER.md` antes de mudar planilha.
 
 ---
 
@@ -214,7 +239,7 @@ Screenshot só com dados fictícios. Trilha Simple. Não implementar backend.
 
 **Tarefas**
 - [ ] Ler `PLANO-CLIENTES-HUNTER.md` fase 3
-- [ ] Plan Mode: `.cursor/plans/plan-YYYY-MM-DD-gate-dia-22.md`
+- [ ] `to-spec` + `to-issues`: `.cursor/plans/plan-YYYY-MM-DD-hunter-gate-dia-22.md`
 - [ ] Decidir: **seguir manual** ou **autorizar backend** (PostgreSQL, API)
 - [ ] Se não autorizar: registrar decisão no plano + adiar Fase 3
 
@@ -276,4 +301,17 @@ Screenshot só com dados fictícios. Trilha Simple. Não implementar backend.
 
 ---
 
-*Trilha v1.0 — 2026-07-07 — alinhada Rheyder v1.2 + Superpowers*
+## Prompt base Cursor
+
+```text
+Clientes Hunter — Dia N do TRILHA-DIA-A-DIA.md.
+Helder [Simple|Normal|Complex|Hotfix] + skills-pessoal.
+Normal/Complex: to-spec → to-issues → fatia vertical → slice-verification (checklist + LGPD).
+MVP manual: sem tdd; context-discovery antes de mudar CONTEXT/REGRAS.
+HITL: dados reais, contrato de planilha, WhatsApp fora dos limites, backend, commit/push.
+Referências: AGENTS.md, REGRAS-CLIENTES-HUNTER.md, SEGURANCA-LGPD.md.
+```
+
+---
+
+*Trilha v1.1 — 2026-07-09 — Helder v1.2 + skills-pessoal*

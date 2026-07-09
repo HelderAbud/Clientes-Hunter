@@ -9,7 +9,7 @@ Sistema de captação e prospecção comercial para representantes de moda mascu
 
 **Pitch (1 linha):** Prospecção B2B multimarcas com geo-cerca, score e funil até agendamento — MVP manual com KPI e LGPD documentada.
 
-**Trilha portfólio:** [`TRILHA-DIA-A-DIA.md`](TRILHA-DIA-A-DIA.md) · **Roteiro operacional:** [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md)
+**Trilha portfólio:** [`TRILHA-DIA-A-DIA.md`](TRILHA-DIA-A-DIA.md) · **5 etapas (visual):** [`docs/portfolio/etapas.md`](docs/portfolio/etapas.md) · **Roteiro operacional:** [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md)
 
 ---
 
@@ -56,7 +56,7 @@ Detalhe: [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md)
 Clientes Hunter/
 ├── README.md                 ← você está aqui
 ├── LICENSE                   ← MIT
-├── TRILHA-DIA-A-DIA.md       ← trilha portfólio (Rheyder + Superpowers)
+├── TRILHA-DIA-A-DIA.md       ← trilha portfólio (Helder + skills-pessoal)
 ├── CONTEXT.md                ← vocabulário canônico
 ├── CONTRIBUTING.md           ← guia para colaboradores
 ├── CHECKLIST_FINAL.md        ← auditoria pré-push (4 especialistas)
@@ -65,6 +65,7 @@ Clientes Hunter/
 ├── DIA-A-DIA-CLIENTES-HUNTER.md
 ├── SEGURANCA-LGPD.md
 ├── .env.example
+├── docs/portfolio/etapas.md  ← narrativa 5 etapas + Mermaid
 ├── data/
 │   ├── geo-cerca-cidades.csv      ← 62 cidades (público)
 │   └── clientes-existentes.example.csv
@@ -96,11 +97,22 @@ Clientes Hunter/
 
 ## Funil de prospecção
 
+Narrativa das 5 etapas + diagrama detalhado: [`docs/portfolio/etapas.md`](docs/portfolio/etapas.md).
+
+```mermaid
+flowchart LR
+  novo[Novo lead] --> contato[Contato prévio feito]
+  contato --> agenda[Agendamento de visita]
+  agenda --> visita[Visita com mostruário]
+  visita --> pedido[Pedido fechado]
+  visita --> perdido[Perdido]
+  novo --> descartado[Descartado]
+  contato --> descartado
+  agenda --> descartado
+  visita --> descartado
 ```
-Novo lead → Contato prévio → Agendamento → Visita → Fechado / Perdido
-                                              ↓
-                                         Descartado
-```
+
+Screenshot da planilha demo (dados fictícios): `docs/screenshots/planilha-demo.png` — guia: [`docs/screenshots/README.md`](docs/screenshots/README.md).
 
 Regras completas: [`REGRAS-CLIENTES-HUNTER.md`](REGRAS-CLIENTES-HUNTER.md)
 
@@ -120,6 +132,7 @@ Regras completas: [`REGRAS-CLIENTES-HUNTER.md`](REGRAS-CLIENTES-HUNTER.md)
 | Documento | Conteúdo |
 |-----------|----------|
 | [`TRILHA-DIA-A-DIA.md`](TRILHA-DIA-A-DIA.md) | Trilha portfólio dia a dia |
+| [`docs/portfolio/etapas.md`](docs/portfolio/etapas.md) | 5 etapas + Mermaid (portfólio) |
 | [`CONTEXT.md`](CONTEXT.md) | Vocabulário e KPIs |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Como colaborar + fluxo 4 especialistas |
 | [`CHECKLIST_FINAL.md`](CHECKLIST_FINAL.md) | Auditoria pré-envio |
