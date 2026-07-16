@@ -50,6 +50,12 @@ Este repositorio ainda nao tem backend, build ou testes automatizados. Validacoe
 - Complex: discovery, spec/ADR quando necessario, gates humanos entre fases sensiveis, validacao e registro final.
 - Hotfix: diagnostico sistematico, patch minimo, smoke/regressao que prove a correcao e registro do aceite.
 
+### Git (branches e autor)
+
+- Nunca commit/push direto em `Main`: criar `feat/`, `docs/` ou `fix/` a partir de `Main` atualizada, abrir PR, conferir, so entao merge; depois `git pull` em `Main`.
+- Detalhe do fluxo: `CONTRIBUTING.md` §6.
+- Nao incluir `Co-authored-by: Cursor` / `cursoragent` nos commits; autor unico Helder Abud.
+
 ### Gates Humanos
 
 Pedir aprovacao explicita antes de:

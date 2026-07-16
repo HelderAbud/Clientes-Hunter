@@ -131,14 +131,31 @@ docs(readme): atualiza progresso Dias 1-6
 
 ## 6. Branches
 
+Branch estável canónica: **`Main`** (não `main`).
+
 | Branch | Uso |
 |--------|-----|
-| `main` | Estável, sempre utilizável |
+| `Main` | Estável; só recebe merge após conferência |
 | `feat/nome-curto` | Nova funcionalidade |
 | `docs/nome-curto` | Só documentação |
 | `fix/nome-curto` | Correção |
 
-Fluxo: `feat/...` → PR ou merge em `main` após checklist.
+**Regra:** não commitar nem pushar direto em `Main` (exceto hotfix urgente com aceite explícito do titular).
+
+### Fluxo obrigatório
+
+1. Atualizar a base: `git checkout Main && git pull`
+2. Criar ramificação: `git checkout -b docs/assunto` (ou `feat/` / `fix/`)
+3. Fazer as alterações e commit(s) na branch
+4. Abrir PR no GitHub → `Main`
+5. Conferir checklist §8 + LGPD (`git diff`, sem dados sensíveis)
+6. Merge do PR → apagar a branch remota se o GitHub oferecer
+7. Voltar ao local: `git checkout Main && git pull`
+
+### Autor dos commits
+
+- Autor único deste projeto: **Helder Abud** (conta GitHub `HelderAbud`).
+- Não adicionar `Co-authored-by: Cursor` / `cursoragent` (nem outros agentes) nas mensagens de commit.
 
 ---
 
