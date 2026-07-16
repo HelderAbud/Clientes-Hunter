@@ -5,13 +5,15 @@ alwaysApply: true
 
 # Clientes Hunter Domain
 
-- O projeto esta no MVP manual: Google Sheets, CSV, Markdown, Cursor e WhatsApp Business manual com HITL.
+- O projeto esta no MVP: Google Sheets, CSV, Markdown, Cursor e WhatsApp Business manual com HITL.
+- Coleta assistida Google Places (ADR 0004) pode gerar **candidatos**; lead/WA so apos triagem humana. Exports reais fora do Git (`data/exports/`).
 - O publico-alvo sao lojas masculinas multimarcas no DF e Norte de Goias.
 - KPI principal: `agendamentos confirmados / leads qualificados`.
 - Fonte de verdade para termos: `CONTEXT.md`. Regras detalhadas: `REGRAS-CLIENTES-HUNTER.md`. Privacidade: `SEGURANCA-LGPD.md`.
 
 ## Regras De Negocio
 
+- **Candidato** (Places) nao e lead qualificado ate triagem humana.
 - Lead qualificado precisa estar na geo-cerca, ter perfil masculino/multimarcas, indicio de WhatsApp, pelo menos 4 marcas masculinas e nao ser cliente existente.
 - Cidade fora de `data/geo-cerca-cidades.csv` vira `Descartado` com motivo `Fora da geo-cerca`.
 - Loja exclusivamente feminina vira `Descartado` com motivo `Loja feminina`.
@@ -24,16 +26,16 @@ alwaysApply: true
 - WhatsApp frio sempre manual no MVP: 5-8 novas abordagens por dia, uma por loja/dia, follow-up so em outro dia.
 - Horario de envio: 9h-17h preferencial, nunca apos 18h.
 - Instagram e manual, apenas perfis publicos, com 8-12 perfis triados por dia.
-- Nao propor bot logado, scraping em massa, rotacao de IP, DM fria em massa ou lista de transmissao para prospeccao fria.
+- Places (quando usado): 1 cidade/run, cap <= 40; sem scrape HTML, bot logado, rotacao de IP, DM fria em massa ou lista de transmissao.
 
 ## Dados Sensiveis
 
-- Nunca commitar ou expor `data/clientes-existentes.csv`, `data/_pdf_raw.txt`, PDFs de clientes, `.env`, cookies, sessoes ou exports com telefones reais.
+- Nunca commitar ou expor `data/clientes-existentes.csv`, `data/_pdf_raw.txt`, PDFs de clientes, `.env`, cookies, sessoes ou exports com telefones reais (`data/exports/`).
+- Nunca abrir o CSV real de clientes no chat de IA; usar example ou recortes mascarados.
 - Antes de usar IA, mascarar telefone como `TELEFONE_OCULTO` e CNPJ como `CNPJ_OCULTO`.
 - Nao enviar CSV/PDF inteiro de clientes para IA; usar apenas recortes minimos e mascarados.
 
-## Fora Do Escopo Ate O Gate Dia 22
+## Fora Do Escopo Ate Decisao Registrada
 
-- Nao implementar PostgreSQL, API, JWT, n8n, Evolution API, painel Kanban, deduplicacao automatica ou `sanitizeForAI()` como se ja existissem.
+- Nao implementar PostgreSQL, API JWT, n8n, Evolution API, painel Kanban, scraping Instagram ou `sanitizeForAI()` como se ja existissem — salvo ADR/plano aprovado (Places = ADR 0004 apenas para coleta assistida).
 - Esses termos podem aparecer em roadmap, ADR ou plano futuro, mas nao devem virar execucao sem decisao registrada.
-

@@ -13,11 +13,15 @@ Referência de intenção: [`Novo Documento de Texto.md.txt`](Novo%20Documento%2
 | `data/clientes-existentes.csv` | CNPJ e dados comerciais da carteira |
 | `data/_pdf_raw.txt` | Extração bruta do PDF de clientes |
 | `*.pdf` de clientes / exports | Mesmo conteúdo sensível |
-| `.env` | Tokens (Telegram, Evolution, APIs) |
+| `.env` | Tokens (Places API, Telegram, Evolution, etc.) |
 | Backups de planilha com telefones | Dados pessoais/comerciais |
 | Cookies/sessão Instagram | Risco de hijack de conta |
+| `data/exports/*.csv` (candidatos Places, leads reais) | Telefones / endereços comerciais |
+| Qualquer `*candidatos*.csv` com dados reais | Mesmo risco (exceto `Candidatos.example.csv`) |
 
-**Pode commitar:** `geo-cerca-cidades.csv`, regras, templates **sem** dados reais, `.env.example`.
+**Pode commitar:** `geo-cerca-cidades.csv`, regras, templates **sem** dados reais, `.env.example`, `Candidatos.example.csv`, `data/exports/README.md`.
+
+**Também nunca:** pushar, publicar planilha na web, compartilhar link aberto, ou colar esses arquivos inteiros em chat de IA (Cursor incluso). Agente/IA **não deve abrir** `clientes-existentes.csv` real — só o `.example` ou contagens agregadas.
 
 ---
 
@@ -69,11 +73,13 @@ Dúvida: mensagem de primeiro contato WhatsApp
 
 ---
 
-## 5. Instagram e web (manual)
+## 5. Instagram, web e coleta assistida
 
-- Só **perfis públicos**; leitura manual (bio + ~12 posts).
-- **Limite:** 8–12 perfis triados por dia.
-- **Proibido no MVP:** bot logado, scraping em massa, rotação de IP, DM frio em massa.
+- Só **perfis públicos**; leitura manual (bio + ~12 posts) no fluxo Instagram.
+- **Limite:** 8–12 perfis triados por dia (Instagram manual).
+- **Proibido:** bot logado, scraping em massa (Maps HTML / Instagram), rotação de IP, DM frio em massa.
+- **Permitido (ADR 0004):** coleta assistida via **Google Places API** (oficial), piloto limitado; saída em `data/exports/` (**fora do Git**).
+- Candidato Places **não** vira WhatsApp sem triagem humana.
 - Respeitar pedido de exclusão se loja responder no WhatsApp.
 
 ---
@@ -108,11 +114,13 @@ Não registrar em `observacoes` ou chats:
 
 ## 9. Checklist rápido (antes de cada sessão)
 
-- [ ] Dados sensíveis fora do Git?
-- [ ] IA recebe só o mínimo mascarado?
+- [ ] Dados sensíveis fora do Git? (`git status` sem `clientes-existentes`, exports, `.env`)
+- [ ] IA recebe só o mínimo mascarado? (não abrir CSV real de clientes no Cursor)
 - [ ] Lead checado contra `clientes-existentes` antes de WhatsApp frio?
 - [ ] Loja feminina / fora geo-cerca descartada?
 - [ ] Limite diário de abordagens respeitado?
+- [ ] Planilha Google **privada** (não “publicar na web”)?
+- [ ] Export Places só em `data/exports/` (ignorado pelo Git)?
 
 ---
 

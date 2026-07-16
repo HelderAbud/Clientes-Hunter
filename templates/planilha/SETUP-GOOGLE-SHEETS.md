@@ -46,8 +46,8 @@ Se `whatsapp` estiver só com dígitos na coluna F (linha 2):
 |-----|----------|
 | **Atividades** | [`Atividades.csv`](Atividades.csv) |
 | **Clientes** | [`../../data/clientes-existentes.csv`](../../data/clientes-existentes.csv) — **ocultar aba** |
-| **KitsFotos** | [`KitsFotos.csv`](KitsFotos.csv) |
 | **Hashtags** | [`Hashtags.csv`](Hashtags.csv) |
+| **Candidatos** (opcional) | Só para treinar: [`Candidatos.example.csv`](Candidatos.example.csv) — guia [`Candidatos-revisao.md`](Candidatos-revisao.md). CSV **reais** ficam em `data/exports/` (fora do Git), não versionar |
 | **Dashboard** | Criar manualmente — fórmulas em [`Dashboard-formulas.md`](Dashboard-formulas.md) |
 
 ## 4. Permissões

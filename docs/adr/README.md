@@ -30,3 +30,4 @@ Use [`TEMPLATE.md`](TEMPLATE.md). Nome do arquivo: `NNNN-slug-curto.md`
 | [0001](0001-mvp-em-sheets-antes-de-postgres.md) | MVP em Google Sheets antes de PostgreSQL | Aceito |
 | [0002](0002-whatsapp-manual-hitl-antes-de-evolution.md) | WhatsApp manual com aprovação humana antes da Evolution API | Aceito |
 | [0003](0003-retencao-e-mascaramento-lgpd.md) | Retenção 12 meses + dados sensíveis fora do Git + mascaramento para IA | Aceito |
+| [0004](0004-coleta-assistida-google-places.md) | Coleta assistida Places (piloto Brasília); sem scrape/WA auto | Aceito |
