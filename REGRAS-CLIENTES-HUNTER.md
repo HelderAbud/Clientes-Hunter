@@ -6,7 +6,7 @@ Documento de referência da **Task A1**. Atualizado com geo-cerca, clientes exis
 
 ## 1. Objetivo
 
-Prospecção de **lojas masculinas multimarcas** no **DF** e **Norte de Goiás**, com contato **100% WhatsApp Business**, usando **Instagram + Google Maps** para achar e qualificar leads.
+Prospecção de **lojas masculinas multimarcas** no **DF** e **Norte de Goiás**, com contato **100% WhatsApp Business**. Captação: **Instagram** (manual), **Google Maps** (manual ou **coleta assistida** via Places API — [ADR 0004](docs/adr/0004-coleta-assistida-google-places.md)), guia ou indicação.
 
 **KPI principal:** `agendamentos confirmados ÷ leads qualificados`
 
@@ -94,10 +94,18 @@ Se bater → marcar `flag_ja_cliente = sim` e **não** usar template de prospec�
 
 | Canal | Uso |
 |-------|-----|
-| **Instagram** | Achar loja, qualificar (bio + 12 posts), contar marcas, flags feminina/cliente existente |
-| **Google Maps** | Achar loja, telefone, cruzar com Insta |
-| **WhatsApp Business** | **Único** canal de contato com lojista |
-| **Planilha** | CRM, funil, KPI (não substituída pelo WhatsApp) |
+| **Instagram** | Qualificar (bio + 12 posts), contar marcas, flags feminina/cliente existente — **manual** |
+| **Google Maps / Places** | Achar loja e telefone: manual **ou** coleta assistida (API oficial → candidatos em `data/exports/`) |
+| **WhatsApp Business** | **Único** canal de contato com lojista (**HITL**, nunca lista de transmissão fria) |
+| **Planilha** | CRM, funil, KPI |
+
+### 6.1 Candidato → lead (coleta assistida)
+
+1. Coleta Places gera **candidatos** (`status_revisao = Pendente`), **não** leads prontos para WA.
+2. Humano tria: geo-cerca, feminina, já cliente, WhatsApp, multimarcas (REGRAS §4).
+3. Só então promove para aba/CSV **Leads** com `fonte = Maps` e `status_funil` adequado (em geral `Novo lead`).
+4. Exports reais **nunca** vão para o Git — ver [`SEGURANCA-LGPD.md`](SEGURANCA-LGPD.md).
+5. **Proibido:** scrape HTML Maps/Instagram, bot logado, envio automático de WhatsApp.
 
 ---
 
@@ -140,17 +148,19 @@ Além das colunas base, usar:
 
 Seguir [`SEGURANCA-LGPD.md`](SEGURANCA-LGPD.md):
 
-- Dados de clientes (`clientes-existentes.csv`) **fora do Git**
+- Dados de clientes (`clientes-existentes.csv`) e exports Places (`data/exports/`) **fora do Git**
 - Separar abas Leads / Clientes / Atividades na planilha
 - Mascarar telefone e CNPJ antes de usar IA
 - Instagram manual com limite diário; sem scraping agressivo
+- Coleta Places só com API oficial e caps do [ADR 0004](docs/adr/0004-coleta-assistida-google-places.md)
 
 ---
 
 ## 11. Próximo passo
 
-- **Agora:** [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md) — escreva **`Iniciar Dia 6`** (templates WhatsApp)
-- **Planilha:** importar [`templates/planilha/`](templates/planilha/) no Google Sheets — guia [`SETUP-GOOGLE-SHEETS.md`](templates/planilha/SETUP-GOOGLE-SHEETS.md)
+- Operação: [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md) / [`TRILHA-DIA-A-DIA.md`](TRILHA-DIA-A-DIA.md)
+- Coleta assistida: [`.cursor/plans/plan-2026-07-16-coleta-assistida-places.md`](.cursor/plans/plan-2026-07-16-coleta-assistida-places.md)
+- Planilha: [`templates/planilha/`](templates/planilha/) — guia [`SETUP-GOOGLE-SHEETS.md`](templates/planilha/SETUP-GOOGLE-SHEETS.md)
 
 ---
 

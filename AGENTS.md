@@ -26,10 +26,11 @@ Este repositorio ainda nao tem backend, build ou testes automatizados. Validacoe
 
 ## Regras de Arquitetura e Produto
 
-- Manter o MVP atual como Google Sheets + CSV + Markdown + WhatsApp manual.
-- Nao implementar PostgreSQL, n8n, Evolution API, JWT, painel Kanban ou automacao de scraping antes do gate do Dia 22 registrado no plano.
+- Manter o MVP atual como Google Sheets + CSV + Markdown + WhatsApp manual (HITL).
+- **Coleta assistida** via Google Places API e permitida sob [ADR 0004](docs/adr/0004-coleta-assistida-google-places.md) (piloto; CSV em `data/exports/`; triagem humana). Nao confundir com scraping.
+- Nao implementar PostgreSQL, n8n, Evolution API, JWT, painel Kanban ou scraping Instagram/Maps HTML sem decisao registrada (Dia 22 / ADR).
 - Toda mudanca de regra de negocio deve atualizar primeiro o contrato minimo correto: `CONTEXT.md`, `REGRAS-CLIENTES-HUNTER.md`, plano aprovado ou ADR.
-- Preservar o vocabulario canonico: lead, lead qualificado, geo-cerca, multimarcas real, ja cliente, reativacao, score, funil, descartado e opt-out.
+- Preservar o vocabulario canonico: lead, **candidato**, lead qualificado, coleta assistida, geo-cerca, multimarcas real, ja cliente, reativacao, score, funil, descartado e opt-out.
 - Preferir fatias verticais: cada entrega deve fechar valor operacional verificavel, nao apenas uma camada solta.
 - Evitar refactors amplos e abstracoes sem necessidade clara.
 
@@ -55,13 +56,15 @@ Pedir aprovacao explicita antes de:
 
 - usar ou expor dados reais de clientes, CNPJ, telefones, PDFs, exports ou backups;
 - mudar contrato de planilha, funil, score, geo-cerca, templates WhatsApp ou KPI;
-- automatizar WhatsApp, Instagram, scraping, n8n, Evolution API ou backend;
+- automatizar WhatsApp, scraping HTML, n8n, Evolution API ou backend Postgres;
+- expor `data/clientes-existentes.csv`, exports Places com telefones, ou `.env`;
 - criar migrations, banco, API publica ou qualquer operacao destrutiva;
 - commitar, pushar ou abrir PR quando houver arquivos sensiveis ou escopo duvidoso.
 
 ## Seguranca e LGPD
 
-- Nunca commitar `data/clientes-existentes.csv`, `data/_pdf_raw.txt`, PDFs de clientes, `.env`, cookies/sessoes ou exports com telefones reais.
+- Nunca commitar `data/clientes-existentes.csv`, `data/_pdf_raw.txt`, PDFs de clientes, `.env`, cookies/sessoes ou exports com telefones reais (`data/exports/`).
+- Nunca abrir o CSV real de clientes no chat; usar example ou recortes mascarados.
 - Antes de usar IA, mascarar telefone como `TELEFONE_OCULTO` e CNPJ como `CNPJ_OCULTO`.
 - Leads devem armazenar apenas o necessario para prospeccao B2B: nome fantasia, cidade, Instagram, WhatsApp comercial e notas curtas.
 - Opt-out sempre vira `Descartado` com motivo `Opt-out`; nao reabordar.

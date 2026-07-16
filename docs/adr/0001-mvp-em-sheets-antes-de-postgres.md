@@ -18,9 +18,10 @@ tentação de "já fazer direito" com PostgreSQL + API desde o início. Porém:
 ## Decisão
 
 Operar o MVP inteiramente em **Google Sheets** (abas `Leads`, `Atividades`,
-`Clientes`, `KitsFotos`, `Dashboard`), com CSVs versionados como template. A
-migração para PostgreSQL **só é avaliada no gate do Dia 22**, com critérios
-objetivos (ver abaixo).
+`Clientes`, `Hashtags`, `Dashboard`), com CSVs versionados como template.
+A aba `KitsFotos` foi **descontinuada** em 2026-07-15 (foto de fachada fica
+no campo, fora do repo). A migração para PostgreSQL **só é avaliada no gate
+do Dia 22**, com critérios objetivos (ver abaixo).
 
 ## Consequências
 

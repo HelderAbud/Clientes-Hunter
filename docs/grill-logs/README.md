@@ -54,5 +54,12 @@ Antes de eu executar:
 | Data | Dia/Task | Tema | Arquivo |
 |------|----------|------|---------|
 | 2026-06-01 | Dia 6 / A3.1 | Templates WhatsApp + etiquetas | [2026-06-01-dia-06-templates-whatsapp.md](2026-06-01-dia-06-templates-whatsapp.md) |
-| 2026-06-01 | Dia 7 / A3.2 | Confirmação + pós-visita + kits | [2026-06-01-dia-07-confirmacao-posvisita-kits.md](2026-06-01-dia-07-confirmacao-posvisita-kits.md) |
+| 2026-06-01 | Dia 7 / A3.2 | Confirmação + pós-visita + kits *(superseded)* | [2026-06-01-dia-07-confirmacao-posvisita-kits.md](2026-06-01-dia-07-confirmacao-posvisita-kits.md) |
 | 2026-06-02 | Dia 8 / A4 | Playbook Instagram (hashtags + roteiro) | [2026-06-02-dia-08-playbook-instagram.md](2026-06-02-dia-08-playbook-instagram.md) |
+| 2026-07-15 | Dia 7 / contrato | Descontinuar kits + fechar Task A3 | [2026-07-15-descontinuar-kits-fotos.md](2026-07-15-descontinuar-kits-fotos.md) |
+| 2026-07-16 | Complex / Gate 3 | Coleta assistida Places — hardening + ADR 0004 | [2026-07-16-gate3-coleta-assistida-places.md](2026-07-16-gate3-coleta-assistida-places.md) |
+| 2026-07-16 | Complex / Gate 4 | Plano fatias + análise LGPD/Git | ver `.cursor/plans/plan-2026-07-16-coleta-assistida-places.md` |
+| 2026-07-16 | Complex / Fatia 1 | Contrato candidato + coleta assistida | [2026-07-16-fatia1-contrato-coleta-assistida.md](2026-07-16-fatia1-contrato-coleta-assistida.md) |
+| 2026-07-16 | Complex / A+B | Pausar Places pago; caminho 3b zero-custo | [2026-07-16-pausar-places-caminho-zero-custo.md](2026-07-16-pausar-places-caminho-zero-custo.md) |
+| 2026-07-16 | Complex / 3b+4 | Organizador CSV + checklist triagem | [2026-07-16-fatia3b-4-organizador-checklist.md](2026-07-16-fatia3b-4-organizador-checklist.md) |
+| 2026-07-16 | Complex / Fatia 5 | Dry-run (HITL) — em andamento | [COMO-FAZER-FATIA-5.md](COMO-FAZER-FATIA-5.md) · [validation-…](validation-2026-07-16-fatia5-dry-run-candidatos.md) |

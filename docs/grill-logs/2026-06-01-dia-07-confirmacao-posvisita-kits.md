@@ -1,5 +1,7 @@
 # Grill — Dia 07 / Task A3.2 (Confirmação + pós-visita + kits)
 
+> **Superseded 2026-07-15:** kits descontinuados — ver [`2026-07-15-descontinuar-kits-fotos.md`](2026-07-15-descontinuar-kits-fotos.md).
+
 - **Data:** 2026-06-01
 - **Participantes:** representante + Cursor
 - **Referência:** DIA-A-DIA-CLIENTES-HUNTER.md → Dia 7

@@ -23,8 +23,11 @@ campos de planilha/banco nascem com nomes divergentes. Este arquivo evita isso:
 
 | Termo | Significa (definição acordada) | Não confundir com |
 |-------|-------------------------------|-------------------|
-| **Lead** | Registro de uma loja candidata à prospecção fria | Cliente existente (carteira já trabalhada) |
-| **Lead qualificado** | Loja masculina/multimarcas, dentro da geo-cerca, com indício de WhatsApp, **≥4 marcas masculinas**, **não** cliente existente | Qualquer loja encontrada (lead bruto) |
+| **Lead** | Registro de uma loja **já triada** (ou em triagem) na planilha de prospecção fria | **Candidato** (pré-triagem); Cliente existente |
+| **Candidato** | Loja sugerida pela **coleta assistida** (ex.: Places), ainda **não** qualificada; `status_revisao` = Pendente/Qualificado/Descartado | Lead qualificado; linha pronta para WhatsApp |
+| **Lead qualificado** | Loja masculina/multimarcas, dentro da geo-cerca, com indício de WhatsApp, **≥4 marcas masculinas**, **não** cliente existente | Qualquer loja encontrada (candidato ou lead bruto) |
+| **Coleta assistida** | Busca limitada via **Google Places API** (oficial) gerando CSV de candidatos; triagem e WA continuam humanos ([ADR 0004](docs/adr/0004-coleta-assistida-google-places.md)) | Scraping HTML; bot Instagram; envio automático de WA |
+| **`status_revisao`** | Estado do candidato: `Pendente` / `Qualificado` / `Descartado` (antes de virar lead no funil) | `status_funil` (só após promoção a lead) |
 | **Geo-cerca** | Lista **fechada** de 62 cidades (DF + Norte GO) em [`data/geo-cerca-cidades.csv`](data/geo-cerca-cidades.csv) onde a prospecção é válida | Raio em km / mapa de calor |
 | **`status_cidade` = ABRIR** | Cidade priorizada para caçar lojas **novas** (prospecção fria) | OK |
 | **`status_cidade` = OK** | Carteira já trabalhada; foco em **reativação**, não prospecção massiva | ABRIR |
@@ -40,9 +43,9 @@ campos de planilha/banco nascem com nomes divergentes. Este arquivo evita isso:
 | **HITL (aprovação humana)** | Toda mensagem é **sugerida** pela IA/template e **enviada manualmente** após você revisar | Envio automático |
 | **Disparo** | Envio efetivo da mensagem (no MVP, **sempre manual**) | Automação Evolution (fase futura) |
 | **Opt-out** | Loja pediu para **não ser contatada** → `Descartado` + motivo `Opt-out`, nunca reabordar | Lead "Perdido" |
-| **Kit de fotos** | Conjunto curado de fotos do mostruário por perfil de loja (aba `KitsFotos`) | Catálogo completo |
-| **Fonte** | De onde o lead veio: `Instagram` / `Maps` / `Guia` / `Indicação` | Canal de contato (sempre WhatsApp) |
-| **MVP** | Operação atual: **Google Sheets + CSV + Cursor + WhatsApp manual** | App com Postgres (Fase 3, pós-Dia 22) |
+| **Foto de fachada** | Evidência visual da loja capturada pelo representante no campo (celular/Drive pessoal); **fora do repo e sem aba obrigatória na planilha** | Kit de fotos / aba `KitsFotos` (descontinuados no MVP) |
+| **Fonte** | De onde o lead veio: `Instagram` / `Maps` / `Guia` / `Indicação` (`Maps` inclui Places API) | Canal de contato (sempre WhatsApp) |
+| **MVP** | Sheets + CSV + Cursor + WhatsApp HITL; **coleta assistida Places** autorizada (piloto Brasília, ADR 0004); CRM continua sem Postgres | App Postgres completo; Evolution; scrape |
 
 ---
 
@@ -77,16 +80,21 @@ Valores aceitos (sem digitação livre): `Novo lead`, `Contato prévio feito`,
 - **No máximo 1 abordagem por loja/dia**; follow-up só em outro dia.
 - Horário **9h–17h** (preferencial; **nunca após as 18h**); nunca lista de transmissão para fria.
 - Instagram: só perfis públicos, **8–12 perfis triados/dia**, leitura manual.
+- Coleta Places (quando ativa): **1 cidade/run**, cap **≤ 40** candidatos; exports só em `data/exports/` (fora do Git).
 
 ---
 
 ## Termos reservados para fases futuras (não usar como se já existissem)
 
 `PostgreSQL`, `tabela events`, `deduplicação automática`, `Evolution API`,
-`n8n`, `JWT`, `sanitizeForAI()`, `painel Kanban`. Só entram no vocabulário ativo
-**após o gate do Dia 22** (decisão Fase 3) — ver
-[`PLANO-CLIENTES-HUNTER.md`](PLANO-CLIENTES-HUNTER.md) §9.
+`n8n`, `JWT`, `sanitizeForAI()`, `painel Kanban`, scraping Instagram automatizado.
+Só entram no vocabulário ativo **após decisão registrada** (Dia 22 / ADR).
+
+**Já autorizados por ADR (não são “futuro vazio”):**
+- Coleta assistida Google Places — [ADR 0004](docs/adr/0004-coleta-assistida-google-places.md) (piloto; script local + CSV).
+- WhatsApp continua HITL — [ADR 0002](docs/adr/0002-whatsapp-manual-hitl-antes-de-evolution.md).
 
 ---
 
 *Documento vivo. Ao fechar um Dia/Task que mude uma regra de negócio, atualize o termo aqui e registre no grill log correspondente.*
+*Última atualização relevante: 2026-07-16 — candidato + coleta assistida (Fatia 1).*

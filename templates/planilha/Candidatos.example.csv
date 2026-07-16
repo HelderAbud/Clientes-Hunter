@@ -1,0 +1,4 @@
+place_id,nome,cidade,endereco,telefone,site,maps_url,fonte,coletado_em,status_revisao,observacoes
+ChIJ_EXEMPLO_DEMO_001,MODA NORTE DEMO LTDA,BRASILIA,"SCS Quadra 00 Bloco X Loja 00, Brasilia DF",61999990021,https://example.com/moda-norte-demo,https://maps.google.com/?cid=demo001,Maps,2026-07-16T12:00:00-03:00,Pendente,Linha ficticia - piloto Places
+ChIJ_EXEMPLO_DEMO_002,BOUTIQUE FEMME DEMO,BRASILIA,"CLS 00 Bloco Y, Brasilia DF",61999990022,,https://maps.google.com/?cid=demo002,Maps,2026-07-16T12:00:00-03:00,Descartado,Exemplo descarte Loja feminina (ficticio)
+ChIJ_EXEMPLO_DEMO_003,MULTIMARCAS CENTRO FAKE,BRASILIA,"SIA Trecho 00, Brasilia DF",TELEFONE_OCULTO,https://example.com/multimarcas-fake,https://maps.google.com/?cid=demo003,Maps,2026-07-16T12:00:00-03:00,Qualificado,Exemplo apos triagem - promover a Leads (ficticio)

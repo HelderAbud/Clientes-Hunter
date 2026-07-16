@@ -9,23 +9,32 @@ Novo Documento de Texto.md.txt
 data/clientes-existentes.csv
 data/_pdf_raw.txt
 data/backups/
-data/exports/
 data/*.pdf
+
+# Exports reais (Places, planilha, candidatos) — pasta local apenas
+# README da pasta pode ser versionado; CSVs reais não
+data/exports/*
+!data/exports/README.md
 
 # PDFs e exports em qualquer pasta do projeto
 *.pdf
 Clientes_*.pdf
 
-# Secrets (fases futuras: Telegram, Evolution, APIs)
+# Secrets (Places API, Telegram, Evolution, etc.)
 .env
 .env.*
 !.env.example
 
-# Planilhas com telefones reais (se exportar para xlsx/csv local)
+# Planilhas / CSV com telefones reais (exports locais)
 *-leads-export.csv
 *-leads-export.xlsx
 Clientes-Hunter-Leads*.csv
 Clientes-Hunter-Leads*.xlsx
+*candidatos*.csv
+!**/Candidatos.example.csv
+!**/Candidatos-entrada.example.csv
+places-out/
+**/places-out/
 
 # Sessões / credenciais
 *cookies*

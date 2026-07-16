@@ -141,17 +141,17 @@ Screenshot só com dados fictícios. Trilha Simple. Não implementar backend.
 
 > **Referência:** [`DIA-A-DIA-CLIENTES-HUNTER.md`](DIA-A-DIA-CLIENTES-HUNTER.md) — Dias 7–15.
 
-### Dia 3 — Iniciar Dia 7 (biblioteca + preparação Instagram)
+### Dia 3 — Iniciar Dia 7 (biblioteca WhatsApp)
 
 | Trilha | Normal |
 |--------|--------|
 
 **Tarefas**
-- [ ] Cursor: `Iniciar Dia 7`
-- [ ] Revisar biblioteca de marcas / critérios multimarcas
-- [ ] `to-issues`: fatia do dia em `.cursor/plans/plan-YYYY-MM-DD-hunter-dia-7.md`
+- [x] Cursor: `Iniciar Dia 7` — templates já prontos
+- [x] Kits de fotos **descontinuados** (2026-07-15) — ver plano + grill
+- [x] Plano: [`.cursor/plans/plan-2026-07-15-hunter-dia-7.md`](.cursor/plans/plan-2026-07-15-hunter-dia-7.md)
 
-**Validação:** checklist do Dia 7 em DIA-A-DIA marcado.
+**Validação:** checklist do Dia 7 em DIA-A-DIA marcado (Task A3 fechada sem kits).
 
 ---
 
@@ -233,6 +233,8 @@ Screenshot só com dados fictícios. Trilha Simple. Não implementar backend.
 
 ## Fase D — Gate Dia 22
 
+> **Paralelo (2026-07-16):** coleta assistida Places autorizada ([ADR 0004](docs/adr/0004-coleta-assistida-google-places.md), plano [`.cursor/plans/plan-2026-07-16-coleta-assistida-places.md`](.cursor/plans/plan-2026-07-16-coleta-assistida-places.md)). CRM permanece Sheets; WA HITL. Postgres continua decisão do Dia 22.
+
 ### Dia 18 — Preparação gate
 
 | Trilha | Complex (só planejamento — spike sem código) |
@@ -240,10 +242,11 @@ Screenshot só com dados fictícios. Trilha Simple. Não implementar backend.
 **Tarefas**
 - [ ] Ler `PLANO-CLIENTES-HUNTER.md` fase 3
 - [ ] `to-spec` + `to-issues`: `.cursor/plans/plan-YYYY-MM-DD-hunter-gate-dia-22.md`
-- [ ] Decidir: **seguir manual** ou **autorizar backend** (PostgreSQL, API)
+- [ ] Decidir: **seguir manual (Sheets)** ou **autorizar backend** (PostgreSQL, API)
 - [ ] Se não autorizar: registrar decisão no plano + adiar Fase 3
+- [x] Coleta Places: **já decidida** (ADR 0004) — não reabrir no Dia 22 salvo mudança de escopo
 
-**HITL obrigatório:** decisão de backend é humana — agente não implementa API sem OK explícito.
+**HITL obrigatório:** decisão de backend é humana — agente não implementa API/Postgres sem OK explícito.
 
 ---
 

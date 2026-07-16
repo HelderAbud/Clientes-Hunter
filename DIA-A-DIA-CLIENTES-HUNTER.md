@@ -144,20 +144,21 @@ flowchart LR
 
 1. **Aba `Atividades`:** `data` · `id_lead` · `acao` · `canal` · `resposta` · `nota`
 2. **Aba `Clientes`:** importar colunas de [`data/clientes-existentes.csv`](data/clientes-existentes.csv) (`codigo`, `cnpj`, `fantasia`, `cidade`, `uf`, `situacao`) — **aba oculta ou protegida**
-3. **Aba `KitsFotos`:** `nome_kit` · `perfil_loja` · `link_pasta` · `observacoes`
-4. **Aba `Dashboard`:** fórmulas simples:
+3. **Aba `Dashboard`:** fórmulas simples:
    - Total leads por `status_funil`
    - Leads qualificados (score alto+médio)
    - Agendamentos confirmados
    - Taxa agendamento = agendamentos ÷ qualificados
-5. **Aba `Hashtags` (opcional):** `hashtag` · `cidade_alvo` · `ultima_busca` · `leads_encontrados`
-6. Importar lista de cidades de `geo-cerca-cidades.csv` para validação de `cidade`
+4. **Aba `Hashtags` (opcional):** `hashtag` · `cidade_alvo` · `ultima_busca` · `leads_encontrados`
+5. Importar lista de cidades de `geo-cerca-cidades.csv` para validação de `cidade`
+
+> **Nota (2026-07-15):** aba `KitsFotos` **descontinuada**. Foto de fachada = seleção no campo + celular/Drive pessoal; sem coluna obrigatória na planilha.
 
 #### Checklist
 
 - [x] Aba `Atividades` criada — *[`templates/planilha/Atividades.csv`](templates/planilha/Atividades.csv)*
 - [x] Aba `Clientes` com import — *[`data/clientes-existentes.csv`](data/clientes-existentes.csv); ocultar aba*
-- [x] Aba `KitsFotos` criada — *[`templates/planilha/KitsFotos.csv`](templates/planilha/KitsFotos.csv)*
+- [x] Aba `KitsFotos` — *descontinuada (2026-07-15); se existir na planilha antiga, pode ocultar/apagar*
 - [x] Aba `Dashboard` com KPI principal — *[`Dashboard-formulas.md`](templates/planilha/Dashboard-formulas.md)*
 - [x] Aba `Hashtags` — *[`templates/planilha/Hashtags.csv`](templates/planilha/Hashtags.csv)*
 - [x] Permissões: só você (ou mínimo necessário) — *ver SETUP*
@@ -201,7 +202,7 @@ flowchart LR
 
 1. Criar **5 etiquetas** WA: `OH-Novo` · `OH-Contato` · `OH-Agenda` · `OH-Visita` · `OH-Fechado` · `OH-Perdido` · `OH-Não abordar`
 2. Escrever **3 templates primeiro contato** (variações) com placeholders `{loja}` `{cidade}` `{seu_nome}` `{regiao}`
-3. Salvar templates na aba `KitsFotos` ou doc local `templates-whatsapp.md`
+3. Salvar templates no doc local [`Mensagens-WhatsApp.md`](templates/planilha/Mensagens-WhatsApp.md)
 4. Testar fluxo: planilha → copiar texto → `link_wa_me` → colar → **não enviar** (dry run)
 
 #### Checklist
@@ -217,24 +218,23 @@ flowchart LR
 
 ---
 
-### Dia 7 — Templates restantes + kits de fotos (Task A3.2)
+### Dia 7 — Templates restantes (Task A3.2)
 
-**Objetivo:** fechar biblioteca comercial.
+**Objetivo:** fechar biblioteca comercial (mensagens). Kits de fotos no Drive **fora do MVP**.
 
 #### Passo a passo
 
 1. **2 templates** confirmação de agendamento
 2. **2 templates** pós-visita (obrigado + follow-up pedido)
-3. **3 kits de fotos** (Drive/pasta): nome, perfil de loja, link
-4. Registrar kits na aba `KitsFotos`
+3. ~~Kits de fotos / aba `KitsFotos`~~ — **descontinuado** (2026-07-15): no campo, foto de fachada fica no celular/Drive pessoal
 
 #### Checklist
 
 - [x] 2 + 2 templates prontos — [`Mensagens-WhatsApp.md`](templates/planilha/Mensagens-WhatsApp.md) §2 e §3
-- [ ] 3 kits de fotos com links — nomes prontos em [`KitsFotos.csv`](templates/planilha/KitsFotos.csv); **falta preencher o link do Drive**
-- [ ] Task A3 fechada (depende dos links acima)
+- [x] Kits de fotos — *descontinuados; não bloqueiam Task A3*
+- [x] Task A3 fechada (templates WhatsApp Dias 6–7)
 
-**Pronto quando:** Task A3 completa (templates ✅ + links dos kits preenchidos).
+**Pronto quando:** ✅ Task A3 completa (templates).
 
 **Próximo:** `Iniciar Dia 8`
 
@@ -333,7 +333,8 @@ flowchart LR
 #### Passo a passo
 
 1. Buscar na cidade do Dia 10 (ou nova ABRIR): *loja masculina multimarcas*
-2. Cadastrar 5 leads `fonte=Maps`
+2. Cadastrar 5 leads `fonte=Maps`  
+   **Opcional (ADR 0004):** coleta assistida Places → triar candidatos em `data/exports/` → só então promover a Leads (nunca WA direto do CSV bruto)
 3. Cruzar com Instagram quando existir (@ + link)
 4. Normalizar telefone e `link_wa_me`
 
@@ -554,6 +555,8 @@ flowchart LR
 
 **Objetivo:** decidir se planilha ainda basta ou se constrói backend.
 
+> **Nota (2026-07-16):** a **coleta assistida Places** (piloto Brasília) foi autorizada em separado pelo [ADR 0004](docs/adr/0004-coleta-assistida-google-places.md) — **não** equivale a autorizar Postgres/API/JWT. O Dia 22 continua valendo para **banco/app**.
+
 #### Critérios para **sim** (ir para Dias 23–30)
 
 - [ ] >200 leads ou duplicatas frequentes
@@ -699,8 +702,8 @@ flowchart LR
 | 4 | Abas + Dashboard | ✅ |
 | 5 | 10 leads teste | ✅ |
 | 6 | Templates WA + etiquetas | ✅ |
-| 7 | Templates + kits fotos | ⬜ **próximo** |
-| 8 | Playbook Instagram | ⬜ |
+| 7 | Templates WA (kits descontinuados) | ✅ |
+| 8 | Playbook Instagram | ⬜ **próximo** |
 | 9 | Revisão + ritual diário | ⬜ |
 | 10–15 | Campo B1 | ⬜ |
 | 16–18 | Visitas B2 | ⬜ |
@@ -710,4 +713,4 @@ flowchart LR
 
 ---
 
-*Última atualização: 2026-06-01 — Dias 1–6 concluídos (Task A3.1: templates WhatsApp + etiquetas); próximo Dia 7.*
+*Última atualização: 2026-07-15 — Dia 7 / Task A3 fechada (templates); kits de fotos descontinuados; próximo Dia 8.*
