@@ -10,8 +10,8 @@ Guia para quem entra no projeto (colaborador ou dev). Leia **nesta ordem** antes
 |------|---------|
 | **O quê** | Prospecção B2B de lojas masculinas multimarcas (DF + Norte GO) |
 | **Como vende** | WhatsApp → agendamento → visita com mostruário |
-| **Fase atual** | MVP manual — Google Sheets + documentação (Dias 1–5 ✅) |
-| **Próximo passo** | Dia 6 — templates WhatsApp (`DIA-A-DIA-CLIENTES-HUNTER.md`) |
+| **Fase atual** | MVP manual — Google Sheets + documentação (Dias 1–7 ✅; Dia 8 parcial) |
+| **Próximo passo** | Fechar Dia 8–9 — perfis teste Insta + ritual (`DIA-A-DIA-CLIENTES-HUNTER.md`) |
 | **KPI principal** | `agendamentos confirmados ÷ leads qualificados` |
 
 Documentos obrigatórios:
@@ -94,7 +94,8 @@ cp .env.example .env
 | Área | Tarefas |
 |------|---------|
 | **Documentação** | Melhorar README, corrigir typos, traduzir seções |
-| **Templates** | Criar templates WhatsApp (Dia 6–7) |
+| **Templates** | WhatsApp Dias 6–7 prontos — revisar/ajustar `Mensagens-WhatsApp.md` se preciso |
+| **Operação** | Fechar Dia 8 (5 perfis teste) + Dia 9 (ritual) |
 | **Planilha** | Validar fórmulas Dashboard, dropdowns, CSVs |
 | **Scripts** | Import CSV, normalizar telefone (Fase 3+) |
 | **Código** | Postgres, API — **só após Dia 22 (gate)** |

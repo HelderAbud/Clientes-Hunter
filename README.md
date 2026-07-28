@@ -2,7 +2,7 @@
 
 Sistema de captação e prospecção comercial para representantes de moda masculina no **DF** e **Norte de Goiás**. Encontra lojas multimarcas no Instagram e Google Maps, qualifica leads por score e geo-cerca, organiza contato WhatsApp com aprovação humana e acompanha o funil Kanban até visita com mostruário. **MVP operacional em Google Sheets.**
 
-[![Progresso](https://img.shields.io/badge/progresso-Dias%201--6%20✅-brightgreen)](#progresso)
+[![Progresso](https://img.shields.io/badge/progresso-Dias%201--7%20✅-brightgreen)](#progresso)
 [![Fase](https://img.shields.io/badge/fase-MVP%20manual-blue)](#stack-atual)
 [![LGPD](https://img.shields.io/badge/LGPD-documentado-orange)](SEGURANCA-LGPD.md)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -41,8 +41,8 @@ Representantes comerciais perdem tempo com leads ruins (loja feminina, fora da �
 |-------|--------|
 | Dias 1–2 — Regras + LGPD | ✅ |
 | Dias 3–5 — Planilha operacional v1 | ✅ |
-| Dia 6 — Templates WhatsApp | ✅ |
-| Dias 7–9 — Biblioteca + Instagram | ⬜ **próximo** |
+| Dias 6–7 — Templates WhatsApp | ✅ |
+| Dias 8–9 — Playbook Insta + revisão | ⬜ **próximo** (Dia 8 parcial: roteiro ✅) |
 | Dias 10–15 — Campo real (20 leads) | ⬜ |
 | Dias 16–22 — Visitas + IA + gate backend | ⬜ |
 
@@ -151,6 +151,20 @@ Regras completas: [`REGRAS-CLIENTES-HUNTER.md`](REGRAS-CLIENTES-HUNTER.md)
 3. **Fase 3** — PostgreSQL + API (após gate Dia 22)
 4. **Fase 4–5** — Import Maps + enriquecimento Instagram
 5. **Fase 6–7** — WhatsApp semi-auto + painel Kanban
+
+---
+
+## Portas reservadas (portfólio)
+
+MVP atual **sem** backend/Docker. Portas reservadas para fase futura (não implementar sem ADR):
+
+| Camada | Porta host |
+|--------|------------|
+| API (futuro) | 8085 |
+| Frontend (futuro) | 5178 |
+| Postgres (futuro) | 5435 |
+
+Inventário local de portas do portfólio (fora deste repositório).
 
 ---
 
