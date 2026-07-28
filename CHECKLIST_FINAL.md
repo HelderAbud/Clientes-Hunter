@@ -3,7 +3,7 @@
 > Auditoria antes de push, PR ou apresentação. Adaptado ao **Clientes Hunter** (MVP documental + planilha).
 > Use o fluxo dos 4 especialistas: Código → Testes → Recrutador → este checklist.
 
-**Progresso atual:** Dias 1–5 ✅ · Próximo: Dia 6 (templates WhatsApp)
+**Progresso atual:** Dias 1–7 ✅ · Dia 8 parcial (roteiro Insta ✅; 5 perfis teste pendentes) · Próximo: fechar Dia 8–9
 
 ---
 
@@ -12,11 +12,11 @@
 - [x] Documentação principal presente (README, PLANO, REGRAS, DIA-A-DIA, SEGURANCA)
 - [x] Templates CSV sem telefones reais (fictícios 6199999000X)
 - [x] Arquivo exemplo de clientes (`clientes-existentes.example.csv`) sem CNPJ real
-- [ ] Remover rascunhos locais (`Novo Documento de Texto.md.txt` — não versionar)
-- [ ] Sem PDFs de clientes no repositório
-- [ ] Nomenclatura consistente (Clientes Hunter, status_funil, geo-cerca)
-- [ ] Links internos entre docs funcionam
-- [ ] Progresso em `DIA-A-DIA-CLIENTES-HUNTER.md` atualizado
+- [x] Rascunhos locais fora do Git (`Novo Documento de Texto.md.txt` no `.gitignore`)
+- [x] PDFs locais fora do Git (`*.pdf`, `data/_pdf_raw.txt` no `.gitignore` — não versionados)
+- [x] Nomenclatura consistente (Clientes Hunter, status_funil, geo-cerca)
+- [x] Links internos principais entre docs (README ↔ REGRAS ↔ DIA-A-DIA ↔ templates)
+- [x] Progresso em `DIA-A-DIA-CLIENTES-HUNTER.md` atualizado (Dias 1–7 ✅; Dia 8 com 1 item aberto)
 
 ---
 
@@ -26,8 +26,8 @@
 - [x] Separação Leads / Clientes / Atividades (conceito + abas planilha)
 - [x] `.gitignore` protege dados sensíveis
 - [x] `.env.example` com placeholders (sem secrets)
-- [ ] `CONTRIBUTING.md` lido por colaboradores
-- [ ] Roadmap futuro documentado (Fases 3–7 no PLANO)
+- [ ] `CONTRIBUTING.md` lido por colaboradores (HITL humano)
+- [x] Roadmap futuro documentado (Fases 3–7 no `PLANO-CLIENTES-HUNTER.md`)
 - [ ] Decisão Dia 22 (planilha vs Postgres) registrada quando chegar
 
 ---
@@ -53,8 +53,8 @@
 - [x] Limite WhatsApp 5–8 abordagens/dia definido
 - [x] Sem scraping agressivo Instagram no MVP
 - [ ] Colaborador recebeu CSV real por canal seguro (fora do Git)
-- [ ] Opt-out documentado (motivo `Opt-out` no funil)
-- [ ] Retenção 12 meses leads Perdido — política acordada
+- [x] Opt-out documentado (motivo `Opt-out` no funil — `SEGURANCA-LGPD.md` / `REGRAS`)
+- [x] Retenção 12 meses leads Perdido — política em `SEGURANCA-LGPD.md`
 
 ---
 
@@ -64,9 +64,9 @@
 - [x] Critérios lead qualificado escritos
 - [x] Regra loja feminina = Descartado
 - [x] Regra ja_cliente = não prospecção fria
-- [ ] Templates WhatsApp criados (Dia 6–7)
-- [ ] Dry run: planilha → mensagem → link_wa_me < 2 min
-- [ ] Playbook Instagram 5 min/perfil (Dia 8)
+- [x] Templates WhatsApp criados (Dia 6–7) — [`templates/planilha/Mensagens-WhatsApp.md`](templates/planilha/Mensagens-WhatsApp.md)
+- [x] Dry run: planilha → mensagem → link_wa_me < 2 min (validado no Dia 6)
+- [x] Playbook Instagram 5 min/perfil escrito (Dia 8) — falta: 5 perfis triados de teste na planilha
 - [ ] Campo B1: 20 leads reais processados (Dia 10–15)
 - [ ] KPI taxa agendamento calculado no Dashboard
 
@@ -77,11 +77,11 @@
 - [x] README com descrição, stack, estrutura, progresso
 - [x] CONTRIBUTING.md para colaboradores
 - [x] Commit inicial com Conventional Commits
-- [ ] Histórico limpo (sem commits genéricos)
+- [ ] Histórico limpo (sem commits genéricos) — ainda há commits legados tipo “Padronização”
 - [ ] Descrição do repositório GitHub (~350 caracteres)
 - [ ] Topics/tags: `prospeccao`, `crm`, `whatsapp`, `google-sheets`
 - [ ] Screenshots planilha/Dashboard (quando tiver dados reais mascarados)
-- [ ] LICENSE definida (se aplicável)
+- [x] LICENSE definida (MIT)
 
 ---
 
@@ -90,7 +90,7 @@
 - [ ] Clone + leitura README + CONTRIBUTING concluídos
 - [ ] Setup planilha feito seguindo SETUP-GOOGLE-SHEETS.md
 - [ ] CSV clientes reais recebido offline
-- [ ] Primeira tarefa atribuída (ex.: Dia 6 templates)
+- [ ] Próxima tarefa operacional: fechar Dia 8 (5 perfis teste) + Dia 9
 - [ ] Fluxo 4 especialistas entendido
 
 ---
@@ -122,7 +122,7 @@
 
 | Prioridade | Item |
 |------------|------|
-| P0 | Dias 6–9 — biblioteca comercial + playbook Insta |
+| P0 | Fechar Dias 8–9 — 5 perfis teste Insta + revisão / ritual diário |
 | P1 | Dias 10–15 — campo real 20 leads + KPI |
 | P2 | Dias 16–18 — visitas B2 |
 | P3 | Dias 19–21 — IA assistente HITL |
